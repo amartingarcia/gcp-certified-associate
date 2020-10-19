@@ -482,6 +482,55 @@ Links:
 - https://www.webopedia.com/quick_ref/OSI_Layers.asp
 
 # Load Balancing
+## Layer 4 vs layer7
+- TCP (of TCP/IP) is usually called layer4 (L4)
+  - it works solely with IP address
+- HTTP and HTTPS work at layer 7 (L7)
+  - These know about URLs and paths
+- Each layer is built on the one below it
+- Therefore:
+  - To route based on URL paths, routing needs to understand L7
+  - L4 cannot route based on the URL paths defined in L7
+
+## What about DNS?
+- NAme resolotuion (via  DNS), can be the firs step in routing
+-  But that comes with a number of problems:
+   -  Layer 4 - Cannot route L4 based on L7 URL paths
+   -  Chunky - DNS queries often cached and reused for huge client sets
+   -  Sticky - DNS lookup "looks on" and refreshing per request has high cost
+      -  Extra latency becouse each request includes another roud-trip
+      -  more money for additional DNS request processing
+   - Not Rob ust - RElies on the client always doing the right thing
+- Premium tier "cold potato" routing with global anycast IPs avoids these problems
 
 Links:
 - https://cloud.google.com/load-balancing/docs/load-balancing-overview
+
+
+## Getting data from one resource to anocher
+- VPC (global) is Virtual Private Cloud - Your private SDN space in GCP
+  - Not just resrouce-to-resource - Also manages the doors to outside & peers
+- Subnets (regional) create logical spaces to contain resources
+  - All subnets can reach all others - globally, without any need for VPNs
+- Routes (global) defines "next hop" for traffic based on destination IP
+  - Routes are global and apply by Instance-level Tags, not by Subnet
+  - No route to the internet gateway means no such data can flow
+- Firewall rules (global) further filter data flow that would otherwise route
+  - all firewall rules are global and apply by instance-level tags or Sercvce Account
+  - Default firewall Rules are restriciv inbound and permissive outbound
+  - 
+Links:
+- https://en.wikipedia.org/wiki/Private_network
+- https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
+
+
+## Lab
+
+Links:
+- https://cloud.google.com/vpc/docs/vpc#subnet-ranges
+
+## Exam tips
+You can edit a subnet to increase its CIDR range
+No need to recaret subnet or instance
+New range must contain old range (ie old range must be subset)
+
