@@ -1,0 +1,3 @@
+# Kubernetes Introduction
+## Installations ...
+![k8s installation](img/k8s_installation.png)
