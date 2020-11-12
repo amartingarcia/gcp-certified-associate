@@ -1,7 +1,7 @@
 # GCP Certified Associate - Cloud Engenieer
 
 # Table of Contents
-1. [Certification Introduction](#certification-introduction)
+1. [Certification Introduction](#1-certification-introduction)
 2. [Introduction in GCP](#introduction-in-gcp)
 3. [Introduction to GCP Product/Services](#introduction-to-gcp-productservices)
 4. [Account Setup](#account-setup)
@@ -27,11 +27,12 @@
 24. [Wrapping-up](#wrapping-up)
 25. [Exam Preparation](#exam-preparation)
 
-# Certification Introduction
-## Job Role description
+# 1 - Certification Introduction
+## 1.1 - Job Role description
 An Associate Cloud Engineer deploys applications, monitors operations of multiple projects, and maintains enterprise solutions to ensure that they meet target perfomance metrics. This individual has experience working with public clouds and on-premises solutions. They are able to use Google Cloud Console and the command-line interface to perfom common platform-based task to maintain one or more deployed solutions that leverage Google-managed or self-managed services on Google Cloud.
 
-## Job Role Higlights
+
+## 1.2 - Job Role Higlights
 - Deploy applications
 - Monitors operations of multiple projects
 - Maintains enterprises solutions to ensure they meet target perfomance metrics
@@ -41,7 +42,8 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 - Maintain one or more deployed solutions
 - Leverages Google-managed or self-managed services on Google Cloud
 
-## Exam Sections (aka "Domains")
+
+## 1.3 - Exam Sections (aka "Domains")
 - Section 1: Setting up a cloud solution environment
   - 1.1 - Setting up cloud projects and accounts
   - 1.2 - Managing billing configuration
@@ -72,13 +74,14 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
   - 5.3 - Viewing audit logs for project and managed services
 
 
-## Links Section
+## 1.4 - Links Section
 - [Google Certified Associate Cloud Engineer](https://cloud.google.com/certification/guides/cloud-engineer/)
 
 
-# Introduction in GCP
-## GCP Context
-### History of GCP
+
+# 2 - Introduction in GCP
+## 2.1 - GCP Context
+### 2.1.1 - History of GCP
 - Grew some services internally
   - Built by Googlers for Google
   - Not originally for Enterprise
@@ -89,19 +92,22 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
   - Avoided some mistake
   - More willing to be "a cloud" that you use, not just "the cloud" that you use
 
-### Links Section
+
+### 2.1.2 - Links Section
 - [SRE Books](https://landing.google.com/sre/books/)
 - [Interview with Lynn Langit](https://read.acloud.guru/serverless-superheroes-lynn-langit-on-big-data-nosql-and-google-versus-aws-f4427dc8679c)
 - [Google Tools](https://en.wikipedia.org/wiki/Google_data_centers#Software)
 
-## GCP Desing and Structure
-### Desing Principles:
+
+## 2.2 - GCP Desing and Structure
+### 2.2.1 - Desing Principles:
 * Global
 * Secure
 * Huge scale
 * For developers
 
-### Global System:
+
+### 2.2.2 - Global System:
 * GCP is intrinsically global
 * AWS is intrinsically region-scoped
 * Regional model
@@ -111,7 +117,8 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
   * Could be more sensitive to multi-region/global failure modes
     * (Due to service failures, not underlying hardware issues)
 
-### Physical Infrastructure:
+
+### 2.2.3 - Physical Infrastructure:
 * vCPU
 * Physical server
 * Rack
@@ -122,10 +129,12 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 * Private global network
 * Points of Presence (POPs) - Network edges and CDN locations
 
-### Global Regions
+
+### 2.2.4 - Global Regions
 ![Global regions](img/global_regions.png)
 
-### Network Ingress & Egress
+
+### 2.2.5 - Network Ingress & Egress
 * Normal newtork: Routes via Internet to edge location closest to __destination__
 * Google: Routes so traffic enters form Internet at edge closest to __sources__
   * Enables very interesting scenarios
@@ -133,7 +142,8 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
   * Sidesteps many DNS issues
 * Can now opt for "normal" network routing to reduce price (and functionality)
 
-### Princing
+
+### 2.2.6 - Princing
 * Provisioned - "Make sure you are ready to handle X"
 * Usage - "Handle whatever I use, and charge me for that"
 * Network traffic
@@ -143,7 +153,8 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
     * Depends on the destination service
     * Depends on the location of that service
 
-### Security
+
+### 2.2.7 - Security
 * Separation of duties and physical security
 * Absolutely everyting always encrypted at rest
 * Strong key and identity management
@@ -154,11 +165,13 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 * Distrust the network, anyway
   * BeyondCorp
 
-### Scale and Automation
+
+### 2.2.8 - Scale and Automation
 * Scalability must be unbounded
 * Devs dont want to answer pages
 
-### Resource Quotas (Soft Limits)
+
+### 2.2.9 - Resource Quotas (Soft Limits)
 * Scope
   * Regional
   * Global
@@ -170,13 +183,15 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 * Queryable
   * `gcloud compute project-info describe --project myprojectid`
 
-### Organization
+
+### 2.2.10 - Organization
 * Projects are similar to AWS accounts
 * Projects own resources
 * Resources can be shared with other projects
 * Projects can be grouped and controlled in a hierarchy
 
-### Links Section
+
+### 2.2.11 - Links Section
 - [Data Center Tour #1](https://www.youtube.com/watch?v=XZmGGAbHqa0)
 - [Data Center Tour #2](https://www.youtube.com/watch?v=zDAYZU4A3w0)
 - [Region Maps](https://cloud.google.com/about/locations/#regions-tab)
@@ -192,18 +207,18 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 
 
 
-# Introduction to GCP Product/Services
+# 3 - Introduction to GCP Product/Services
 
 ![Cheat Sheet](img/cheat_sheet.png)
 
 
-## Links Section
+## 3.1 - Links Section
 - [Google Cloud Developers Cheat Sheet](https://github.com/gregsramblings/google-cloud-4-words)
 
 
 
-# Account Setup
-## Free-tier GCP Accounts
+# 4 - Account Setup
+## 4.1 - Free-tier GCP Accounts
 * Billing Account that does not get charged
   * Must be manually upgrade to a paying account
   * Still requires a credit card, for verification
@@ -213,7 +228,8 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 * "Bussines accounts are not elegible for the free trial"
 * Has some restrictions
 
-### Free Trial Restrictions
+
+### 4.1.2 - Free Trial Restrictions
 * No more than 8 vCPUs (total simultaneous)
 * No GPUs (video card chips)
 * No TPUs (custom chips for TensorFlow)
@@ -223,16 +239,19 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 * No premium OS licenses (eg Windows)
 * No Cloud Launcher products with extra usage free
 
-### "Always Free"
+
+### 4.1.3 - "Always Free"
 * "Always Free usage does not count against your free trial credits"
 * Last beyond end of free trial
 
-### "Always Free" Compute Highlights
+
+### 4.1.4 - "Always Free" Compute Highlights
 * 24h/day of f1-micro runtime, _in most US regions, only_
 * 28h/day of App Engine runtime, _in North America_
 * 2M/month of Cloud Functions invocations (with rutntime/size limits)
 
-### "Always Free" Compute Highlights
+
+### 4.1.5 - "Always Free" Compute Highlights
 * Storage averaged over the month
 * 5 GB of Regional Cloud Storage, including some operations
 * 1 GB of Cloud Datastore, including some operations
@@ -241,7 +260,8 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 * 5 GB snapshot storage on GCE (Google Compute Engine) and AE (App Engine)
 * 5 GB of StackDriver logs with 7 day retention
 
-### "Always Free" Networking Highlights
+
+### 4.1.6 - "Always Free" Networking Highlights
 * _Egress to China and Australia not free!_
 * 1 GB/month of App Engine data egress
 * 1 GB/month of Compute Engine data egress
@@ -249,7 +269,8 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 * 5 GB/month of egress from Cloud Storage based in North Amercia
 * 10GB/month of Cloudf PubSub messages
 
-### "Always Free" Other Highlights
+
+### 4.1.7 - "Always Free" Other Highlights
 * 120 build-minutes/day of Google Cloud Container Builder
 * 60 minutes/month of Google Cloud Speech API recognition form audio/video
 * 1000 units/month of Clouf Vision API Calls
@@ -257,16 +278,19 @@ An Associate Cloud Engineer deploys applications, monitors operations of multipl
 * Google Cloud shell with 5 GB of persistent disk storage quota
 * 1 GB of Google Cloud Source Repositories private hosting
 
-### Links Section
+
+### 4.1.8 - Links Section
 - [GCP Free Trial](https://cloud.google.com/free/)
 - [Free Trial Restriction](https://cloud.google.com/free/docs/gcp-free-tier#limitations)
 - ["Always Free"](https://cloud.google.com/free/docs/gcp-free-tier)
 
-## Explore GCP Console
-### Links Section
+
+## 4.2 - Explore GCP Console
+### 4.2.1 - Links Section
 - [Google Cloud Status](https://status.cloud.google.com/)
 
-## Set Up Billing Export
+
+## 4.3 - Set Up Billing Export
 Tools for monitoring, analyzing and optimizing cost have become an important part of managing development. Billing export to Big query enables you to export your daily usage and cost estimates automatically throughout the day to a BigQuery dataset you specify. You can then access your billing data from BigQuery.
 
 * Export must be set up per billing account
@@ -275,25 +299,30 @@ Tools for monitoring, analyzing and optimizing cost have become an important par
 * Billing export is not real-time
   * Delay is hours
 
-### Links Section
+
+### 4.3.1 - Links Section
 - [Billing Export](https://cloud.google.com/billing/docs/how-to/export-data-bigquery)
 
-## Set Up Billing Alert
+
+## 4.4 - Set Up Billing Alert
 To help you with project planning and controlling costs, you can set a budget. Setting a budget lets you track how your spend is growing toward that amount.
 
 You can apply a budget to either a billing account or a project, and you can set the budget at a specific amount or math it to the previous months spend. You can also create alerts to nofify billing administrators when spending exceeds a percentage of your budget.
 
-### Links Section
+
+### 4.4.1 - Links Section
 - [Budgets](https://cloud.google.com/billing/docs/how-to/budgets)
 
-## Set Up Non-Admin Access User
-### Billing IAM
+
+## 4.5 - Set Up Non-Admin Access User
+### 4.5.1 - Billing IAM
 * __Role__: Billing Account User
 * __Purpose__: Link projects to billing accounts
 * __Level__: Organization or billing account
 * __Use Case__: This role has very restricted permissions, so you can grant it broadly, typically in combination with Project Creator. These two roles allow a user to create new projects linked to the billing account on which the role is granted
 
-### Setting UP
+
+### 4.5.2 - Setting UP
 * Get email address of __non-admin__ Google account you control
   * Not the admin account we created when signing up for GCP
   * This wiel be our "user" account
@@ -301,16 +330,18 @@ You can apply a budget to either a billing account or a project, and you can set
   * Could make Google account for any existing email address
   * Could make new Gmail account
 
-### Links Section
+
+### 4.5.3 - Links Section
 - [Billing Access](https://cloud.google.com/billing/docs/how-to/billing-access)
 
 
 
-# Cloud Shell and Data Flows
-## Explore Cloud Shell and Editor
+# 5 - Cloud Shell and Data Flows
+## 5.1 - Explore Cloud Shell and Editor
 Google Cloud Shell provides you with command-line access to your cloud resources directly from your browser. You can easily manage your projects and resources without having to install the Google Cloud SDK or other tools on your system. With Cloud Shell, the Cloud SDK gcloud command-linke tool and other utilities you need are always available, up to date and fully authenticated when you need them.
 
-### Highlights
+
+### 5.1.1 - Highlights
 * Web browser access
   * No need for local terminal
     * Chromebook
@@ -322,19 +353,22 @@ Google Cloud Shell provides you with command-line access to your cloud resources
 * Pre-authorized an always up-to-date
 * Web preview of web app running on local port
 
-### Links Section
+
+### 5.1.2 - Links Section
 - [Cloud Shell](https://cloud.google.com/shell/)
 - [Course Resources](https://github.com/ACloudGuru/gcp-cloud-engineer)
 
-## Data Flows
-## Mental Models
+
+## 5.2 - Data Flows
+### 5.2.1 - Mental Models
 * A simplified representation of reality, which is...
 * Used by your mind to anticipate events or draw conclusions
 * Systems combine
   * Build large systems out of smaller ones (abstractions)
   * Zooming in and out
 
-## Key Takeaways
+
+### 5.2.2 - Key Takeaways
 * Data flows are the foundation of every system
 * Moving, Processing, Remembering
   * Not _just_ Network, Compute, Storage
@@ -346,13 +380,14 @@ Google Cloud Shell provides you with command-line access to your cloud resources
   * Especially in the real world
 * Critical skill for both real world and exam questions.
 
-## Links Section
+
+### 5.2.3 - Links Section
 - [Projects](https://cloud.google.com/docs/overview/#projects)
 
 
 
-# Basic Services
-## GCS (Google Cloud Storage)
+# 6 - Basic Services
+## 6.1 - GCS (Google Cloud Storage)
 * Bucket name, must be __unique__ across Cloud Storage
 * Location type: _(cannot change after the bucket has been created)_
   * __Region__ _(europe-west1, us-east1, etc)_
@@ -370,11 +405,13 @@ Encryption:
 
 > Public object url: https://storage.googleapis.com/bucket-name/object-name
 
-### Links Section
+
+### 6.1.1 - Links Section
 - [Make data public](https://cloud.google.com/storage/docs/access-control/making-data-public)
 - [Google Cloud Storage](https://cloud.google.com/storage)
 
-## GCS via gsutil in Command Line
+
+## 6.2 - GCS via gsutil in Command Line
 * Show Core config
 ```sh
 gcloud config list
@@ -500,10 +537,10 @@ gsutil rm gs://storage-lab-cli/README-cloudshell.txt
 gsutil acl ch -u AllUsers:R gs://storage-lab-cli-2/Selfie.jpg
 ```
 
-### Links Section
+### 6.2.1 - Links Section
 - [Buckets Locations](https://cloud.google.com/storage/docs/locations)
 
-## GCE VM (Google Compute Engine Setup)
+## 6.3 - GCE VM (Google Compute Engine Setup)
 * Get config values
 ```sh
 $ gcloud config get-value project
@@ -624,8 +661,8 @@ Do you want to continue (Y/n)?  Y
 Deleted [https://www.googleapis.com/compute/v1/projects/myprojecttest-293016/zones/europe-west1-c/instances/myvm].
 ```
 
-## Rundown on gcloud
-### Overview
+## 6.4 - Rundown on gcloud
+### 6.4.1 - Overview
 * Command-line tool to interact with GCP
 * Best friends with __gsutil__ _(Google Compute Storage)_ and __bq__ _(BigQuery)_
   * All share same configuration set via __gcloud config__
@@ -636,7 +673,8 @@ Deleted [https://www.googleapis.com/compute/v1/projects/myprojecttest-293016/zon
   * `gcloud beta billing account list`
   * `gcloud beta billing projects link my-project --billing-account XXX-XXX-XXX`
 
-### Basic Syntax
+
+### 6.4.2 - Basic Syntax
 ```sh
 gcloud <global flags> <service/product> <group/area> <command> <flags> <parameters>
 ```
@@ -649,7 +687,8 @@ gcloud <global flags> <service/product> <group/area> <command> <flags> <paramete
   * `gsutil mb -l northamercia-norteast1 gs://storage-name`
   * `gsutil label set bucketlables.json gs://storage-name`
 
-### Global flags
+
+### 6.4.3 - Global flags
 * -- help
 * -h
 * --project <projectid>
@@ -661,7 +700,8 @@ gcloud <global flags> <service/product> <group/area> <command> <flags> <paramete
   * Can pipe ("|") JSON to __jq__ command for futher processing
 * --quiet (or _-q_)
 
-### Config properties
+
+### 6.4.4 - Config properties
 * Values entered once and used by any command that needs them
 * Can be overridden on a specific command with corresponding flag
 * ussed very often for account, project, region, and zone
@@ -673,7 +713,8 @@ gcloud <global flags> <service/product> <group/area> <command> <flags> <paramete
 * Check with _gcloud config set value <property>_
 * Clear with _gcloud config unset <property>_
 
-### Configurations
+
+### 6.4.5 - Configurations
 * Can maintain groups of settings and switch between them
 * Most useful when using multiple projects
 * Iteractive workflow to set common properties in a config with _gcloud init_
@@ -685,14 +726,15 @@ gcloud <global flags> <service/product> <group/area> <command> <flags> <paramete
 * Start ussing config when _gcloud config configurations activate ITS-NAME_
   * Or use for justo one command with _--configuration=ITS-NAME_
 
-### Links section
+
+### 6.4.6 - Links section
 - [Overview Doc for gcloud](https://cloud.google.com/sdk/gcloud/)
 - [Syntax of gcloud](https://cloud.google.com/sdk/gcloud/reference/)
 - [Properties of gcloud](https://cloud.google.com/sdk/docs/properties)
 - [Configuration in gcloud](https://cloud.google.com/sdk/docs/configurations)
 
-## GCE in and out
 
+## 6.5 - GCE in and out
 ```sh
 # Look at how to set the machine type
 gcloud compute machine-types list
@@ -751,13 +793,14 @@ curl *H "Metadata*Flavor: Google" metadata.google.internal/computeMetadata/v1/in
 curl *H "Metadata*Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/service*accounts/default/email
 ```
 
-### Links section
+
+### 6.5.1 - Links section
 - [Filters in gcloud](https://cloud.google.com/sdk/gcloud/reference/topic/filters)
 - [Instace Metadata Reference](https://cloud.google.com/compute/docs/storing-retrieving-metadata)
 
 
-## GCE via console
-### Links section
+## 6.6 - GCE via console
+### 6.6.1 - Links section
 - [Creating instances](https://cloud.google.com/compute/docs/instances/create-start-instance)
 - [Preemptible Instaces](https://cloud.google.com/compute/docs/instances/create-start-preemptible-instance)
 - [Startup Scripts](https://cloud.google.com/compute/docs/startupscript)
@@ -765,40 +808,43 @@ curl *H "Metadata*Flavor: Google" metadata.google.internal/computeMetadata/v1/in
 
 
 
-
-# Scaling
+# 7 - Scaling
 Se manejan mediante __Instance groups__, hay dos tipos:
-
 * __Manejados__: permiten en base a una serie de reglas escalar o no el ńumero de instancias
 * __No manejados__: no permiten escalar
-## Links section
+
+
+## 7.1 - Links section
 - [Instance template](https://cloud.google.com/compute/docs/instance-templates/)
 - [Instance Group](https://cloud.google.com/compute/docs/instance-groups/)
 - [Autoscaling](https://cloud.google.com/compute/docs/autoscaler/)
 
 
 
-# Security
-## What is Security?
-### What is "proper" data flow? CIA
+# 8 - Security
+## 8.1 - What is Security?
+### 8.1.1 - What is "proper" data flow? CIA
 * You cannot view data you shouldn't - __Confidentiality__
 * You cannot change data you shouldn't - __Integrity__
 * You can access data you should - __Availability__
 
-### How do we control data flow? AAA
+
+### 8.1.2 - How do we control data flow? AAA
 * __Authentication__ - Who are you?
 * __Authorization__ - What are you allowed to do?
 * __Accounting__ - What did you do?
 
 * __Reesilency__ - Keep it running
 
-### Key security mindset (Principles)
+
+### 8.1.3 - Key security mindset (Principles)
 * Least privilege
 * Defense in depth
 * Fail securely
 * ...
 
-### Key Security Products/features * AuthN
+
+### 8.1.4 - Key Security Products/features * AuthN
 * Identity
   * Humans in G suite, Cloud identity
   * Applications & services are Service Accounts
@@ -806,7 +852,8 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * Google Groups
 * Can use Google Cloud Directory Sync (GCDS) to pull from LDAP (no push)
 
-### Key Security Products/Features - Acct
+
+### 8.1.5 - Key Security Products/Features - Acct
 * Audit/Activity Logs (provider by StackDriver)
 * Billing export
   * To BigQuery
@@ -814,14 +861,16 @@ Se manejan mediante __Instance groups__, hay dos tipos:
     * Can be _JSON_ or _CSV_
 * GCS Object Lifecycle Managemente
 
-### Links Section
+
+### 8.1.6 - Links Section
 - [Information Security - Wikipedia](https://en.wikipedia.org/wiki/Information_security)
 - [Public Bucket Breach](https://www.google.com/search?q=public+bucket+breach)
 - [Security by Desing Principles](https://wiki.owasp.org/index.php/Security_by_Design_Principles)
 - [OWASP Top 10](https://raw.githubusercontent.com/OWASP/Top10/master/2017/OWASP%20Top%2010-2017%20(en).pdf)
 
-## IAM Breakdown: Resource Hierarchy
-### Resource Hierarchy
+
+## 8.2 - IAM Breakdown: Resource Hierarchy
+### 8.2.1 - Resource Hierarchy
 * Resource
   * Something you create in GCP
 * Project
@@ -831,12 +880,14 @@ Se manejan mediante __Instance groups__, hay dos tipos:
 * Organization
   * Tied to G suite or Cloud Identity domain
 
-### Links Section
+
+### 8.2.2 - Links Section
 - [IAM Overview Docs](https://cloud.google.com/iam/docs/overview)
 - [IAM Resource Hierarchy Docs](https://cloud.google.com/iam/docs/resource-hierarchy-access-control)
 
-## IAM Breakdown: Permissions and Roles
-### Permissions
+
+## 8.3 - IAM Breakdown: Permissions and Roles
+### 8.3.1 - Permissions
 * A permission allows you to perform a certain action
 * Each one follows the form _Service.Resource.Verb_
 * Usually correspond to REST API methods
@@ -844,7 +895,8 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * _pubsub.subscriptions.consume_
   * _pubsub.topics.publish_
 
-### Roles
+
+### 8.3.2 - Roles
 * A role is a collection of permissions to use or manage GCP resources
 * Primitive roles - _Project-level_ and often too broad
   * Viewer is read*only
@@ -857,14 +909,16 @@ Se manejan mediante __Instance groups__, hay dos tipos:
 
 ![roles example](img/roles_example.png)
 
-### Links Section
+
+### 8.3.3 - Links Section
 - [Permissions](https://cloud.google.com/iam/docs/overview)
 - [Understanding Roles](https://cloud.google.com/iam/docs/understanding-roles)
 - [Understanding Custom Roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
 - [Predefined Roles List](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
 
-## IAM Breakdown: Members and Groups
-### Members
+
+## 8.4 - IAM Breakdown: Members and Groups
+### 8.4.1 - Members
 * A member is some Google* known identity
 * Each member is identified by a unique email address
 * Can be:
@@ -876,7 +930,7 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * __allAuthenticatedUsers__: Any Google account or service account
   * __allUsers__: anyone on the internet (public)
 
-### Groups
+### 8.4.2 - Groups
 * A google Group is a named collection of Google accounts and service accounts.
 * Every group has a unique email addresss that is associated with the group
 * You never act as the group
@@ -886,11 +940,13 @@ Se manejan mediante __Instance groups__, hay dos tipos:
 * Can nest groups in an organization
   * Example: one group for each departament, all those in group for all staff
 
-### Links Section
+
+### 8.4.3 - Links Section
 - [Memebers](https://cloud.google.com/iam/docs/overview)
 
-## IAM Breakdown: Policies
-### Policies
+
+## 8.5 - IAM Breakdown: Policies
+### 8.5.1 - Policies
 * A policy binds members to roles for some scope of resources
 * Answers: Who can do what to which things?
 * Attached to some level in the resource Hierarchy
@@ -899,7 +955,8 @@ Se manejan mediante __Instance groups__, hay dos tipos:
 * Always additive (allow) iand ndever substractive (no Deny)
   * Child policies cannot restrict access granted at a higher level
 
-### Policies (cont.)
+
+### 8.5.2 - Policies (cont.)
 * One policy per resource
 * Max 1500 member bindings per policy
   * Ridiculously high max
@@ -911,19 +968,22 @@ Se manejan mediante __Instance groups__, hay dos tipos:
 * Usually takes less than 60s to apply changes (both granting and revoking)
 * may take up to 7 minutes for ... changes to fully propagate across the system
 
-### Links Section
+
+### 8.5.3 - Links Section
 - [Policies](https://cloud.google.com/iam/docs/overview)
 - [Grating, Changing and Revoking Access](https://cloud.google.com/iam/docs/granting-changing-revoking-access)
 - [Docs for gclouds add-iam-policy](https://www.google.com/search?q=gcloud+add-iam-policy-binding+site%3Acloud.google.com)
 
-## IAM Breakdown: Wrap-up
-### Links Section
+
+## 8.6 - IAM Breakdown: Wrap-up
+### 8.6.1 - Links Section
 - [IAM Documentation](https://cloud.google.com/iam/docs/overview)
 - [IAM FAQs](https://cloud.google.com/iam/docs/faq)
 - [Using IAM Securely](https://cloud.google.com/iam/docs/using-iam-securely)
 
-## Billing Access Control
-### Billing Accounts
+
+## 8.7 - Billing Access Control
+### 8.7.1 - Billing Accounts
 * A Billing Account represents some way to pay for GCP service usage
 * Type of Resource that libes outside of Projects
 * Can belong to an Oganization (ie. be owned by it)
@@ -932,16 +992,19 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * But does not own them
     * No impact on project IAM
   
-### Billing Account User
+
+### 8.7.2 - Billing Account User
 * __Role__: Billing Account User
 * __Purpose__: Link projects to billing accounts
 * __Level__: Organization or billing account
 * __Use case__: This role has very restricted permissions, so you can grant it broadly, typically in combination with Project Creator. These two roles allow a user to create new projects linked to the billing account on which the role is granted.
 
-### Billing IAM Roles
+
+### 8.7.3 - Billing IAM Roles
 ![billing iam roles](img/billing_iam_roles.png)
 
-### Monthly invoice Billing
+
+### 8.7.4 - Monthly invoice Billing
 * Get billed monthly and pay by invoice due date
 * can pay via check or wire transfer
 * can increase project and quota limits
@@ -952,23 +1015,25 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * account age
   * typical montyly spend
   * country
-  
-### Links Section
+
+
+### 8.7.5 - Links Section
 - [Overview of Billing Access Control](https://cloud.google.com/billing/docs/how-to/billing-access)
 - [Invoiced Billing](https://cloud.google.com/billing/docs/how-to/invoiced-billing)
 
 
 
-# Networking
-## Routing Overview
-### These lectures are ...
+# 9 - Networking
+## 9.1 - Routing Overview
+### 9.1.1 - These lectures are ...
 * About Software-Defined Networking (SDN)
 * More-general than the OSI 7-layer model of networking
 * Not about any particular routing scheme
 * Only setting the stage for routing tables/routes
 * Meant to make you think about the _data journey_
 
-### What is it?
+
+### 9.1.2 - What is it?
 * Routing is about deciding where data should go next
 * Like a direction marker on a hiking trail
   * Fork in the trail:
@@ -980,26 +1045,31 @@ Se manejan mediante __Instance groups__, hay dos tipos:
     * Go that way (to get down)
 * Many local decisions - No full map or path
 
-### Where does it happen?
+
+### 9.1.3 - Where does it happen?
 * On the way to Google's network
 * On the way to the right resource
 * On the way from one resource to another
 * On the way Back Again
 
-### Links section
+
+### 9.1.4 - Links section
 - [OSI Model](https://www.webopedia.com/quick_ref/OSI_Layers.asp)
 - [Routing - Wikipedia](https://en.wikipedia.org/wiki/Routing)
 
-## Routing: To Google's Network (Premium Routing tier)
-### Getting data to Google's network
+
+## 9.2 - Routing: To Google's Network (Premium Routing tier)
+### 9.2.1 - Getting data to Google's network
 ![premium routing](img/premium_routing.png)
 
-### Links section
+
+### 9.2.2 - Links section
 - [Premium Routing Tier](https://cloud.google.com/blog/products/gcp/introducing-network-service-tiers-your-cloud-network-your-way)
 - [Hot-Potato and cold-potato](https://en.wikipedia.org/wiki/Hot-potato_and_cold-potato_routing)
 
-## Routing: To the Right Resource (Load Balancing)
-### Getting data to the right resource
+
+## 9.3 - Routing: To the Right Resource (Load Balancing)
+### 9.3.1 - Getting data to the right resource
 * Latency reduction
   * Use servers physically close to client
   * Use __Cross-Region Load Balancing__ _(with Global Anycast IPS)_
@@ -1011,10 +1081,12 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * Especially when using microservices (instead of a monolith)
   * Use __HTTP(S) Load Balancer__ _(with URL Map)_
 
-### Unicast vs Anycast
+
+### 9.3.2 - Unicast vs Anycast
 ![unicast_vs_anycast](img/unicast_vs_anycast.png)
 
-### Layer 4 vs layer7
+
+### 9.3.3 - Layer 4 vs layer7
 * TCP (of TCP/IP) is usually called layer4 (L4)
   * IT works solely with IP address
 * HTTP and HTTPS work at layer 7 (L7)
@@ -1024,7 +1096,8 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * To route based on URL paths, routing needs to understand L7
   * L4 cannot route based on the URL paths defined in L7
 
-### What about DNS?
+
+### 9.3.4 - What about DNS?
 * NAme resolution (via DNS), can be the firs step in routing
 *  But that comes with a number of problems:
    *  Layer 4 - Cannot route L4 based on L7 URL paths
@@ -1035,11 +1108,13 @@ Se manejan mediante __Instance groups__, hay dos tipos:
    * Not Robust - Relies on the client always doing the right thing
 * Premium tier "cold potato" routing with global anycast IPs avoids these problems
 
-### Links section
+
+### 9.3.4 - Links section
 - [Load Balancing in GCP](https://cloud.google.com/load-balancing/docs/load-balancing-overview)
 
-## Routing: Among Resources (VPC)
-### Getting data from one resource to anocher
+
+## 9.4 - Routing: Among Resources (VPC)
+### 9.4.1 - Getting data from one resource to anocher
 * VPC (global) is Virtual Private Cloud - Your private SDN space in GCP
   * Not just resrouce*to*resource - Also manages the doors to outside & peers
 * Subnets (regional) create logical spaces to contain resources
@@ -1051,7 +1126,8 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * all firewall rules are global and apply by instance*level tags or Sercvce Account
   * Default firewall Rules are restriciv inbound and permissive outbound
 
-### IPs and CIDRs
+
+### 9.4.2 - IPs and CIDRs
 * IP address is __abc.def.ghi.jkl__ (dotted quad) whre each pieces is 0-255
 * CIDR block is group of IP addresses specified in __<IP>/xy__ notation
   * Turn IP address into 32-bits binary nunmber
@@ -1065,16 +1141,19 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * 172.16.0.0/12
   * 192.168.0.0/16
 
-### Links section
+
+### 9.4.3 - Links section
 - [Classless Inter-Domain Routing (CIDR)](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 - [Private Network](https://en.wikipedia.org/wiki/Private_network)
 
-## Creating Auto-Mode VPCs
-### Links section
+
+## 9.5 - Creating Auto-Mode VPCs
+### 9.5.1 - Links section
 - [VPC Subnet Creation Mode](https://cloud.google.com/vpc/docs/vpc#subnet-ranges)
 
-## Custom-Mode VPCs
-### Links section
+
+## 9.6 - Custom-Mode VPCs
+### 9.6.1 - Links section
 - [VPC](https://cloud.google.com/vpc/docs/vpc)
 - [Understanding IAM Custom Roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
 - [Creating And Managing Custom Roles](https://cloud.google.com/iam/docs/creating-custom-roles)
@@ -1086,8 +1165,9 @@ Se manejan mediante __Instance groups__, hay dos tipos:
 - [Updating Managed Instance Groups](https://cloud.google.com/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups)
 - [Having trouble editing the instance in group](https://acloud.guru/forums/gcp-certified-associate-cloud-engineer/discussion/-LX_K01iaNGvgD6ICp_p/cannot_edit_instance_in_group)
 
-## Network Exam Tips
-### Exam Tips
+
+## 9.7 - Network Exam Tips
+### 9.7.1 - Exam Tips
 * Practice CIDR blocks
   * /16, /24, /28, etc
   * Subnet masks:
@@ -1097,41 +1177,46 @@ Se manejan mediante __Instance groups__, hay dos tipos:
   * Practice common port nunmbers
     * HTTP on 80, HTTPS on 443, SSH on 22, etc
 
-### Subnet CIDR Ranges
+
+### 9.7.2 - Subnet CIDR Ranges
 * You can edit a subnet to increase its CIDR range
 * No need to recreate subnet or instances
 * New range must contain old range (ie. old range must be subset)
 
-### Shared VPC
+
+### 9.7.3 - Shared VPC
 * In an Organization, you can share VPCs among multiple projects
   * Host Project: One project owns the Shared VPC
   * Service Projects: Other projects granted access to use all/part of Shared VPC
 * Lets multiple projects coexist on same local network (private IP space)
 * Lets a centralized team manage network security
 
-### Links section
+
+### 9.7.4 - Links section
 - [Shared VPCs](https://cloud.google.com/vpc/docs/shared-vpc)
 
 
 
-# Kubernetes Introduction
-## Installations ...
+# 10 - Kubernetes Introduction
+## 10.1 - Installations ...
 ![k8s installation](img/k8s_installation.png)
 
 
 
-# Kubernetes Big Picture
-## Big Picture
+# 11 - Kubernetes Big Picture
+## 11.1 - Big Picture
 ![k8s big picture](img/k8s_big_picture.png)
 
-## The Kubernetes API
+
+## 11.2 - The Kubernetes API
 ![k8s api](img/k8s_api.png)
 
 * __Alpha__: Hairy! User beware! (eg _v1alpha1_)
 * __Beta__: Taking shape. Becoming stable. (eg. _v2beta1_)
 * __GA__: Ready for production (eg. _v1_, _v2_)
 
-## Kubernetes Objects
+
+## 11.3 - Kubernetes Objects
 * POD:
   * Contains one or more containers
   * Atomic unit of scheduling
@@ -1147,11 +1232,12 @@ Se manejan mediante __Instance groups__, hay dos tipos:
 
 
 
-# Kubernetes Application Architecture
-## Kubernetes App Theory
+# 12 - Kubernetes Application Architecture
+## 12.1 - Kubernetes App Theory
 ![k8s theory](img/k8s_theory.png)
 
-## Sample Kubernetes App
+
+## 12.2 - Sample Kubernetes App
 ![k8s sample app](img/k8s_sample_app.png)
 
 * Load Balancer __(Frontend)__
@@ -1305,87 +1391,95 @@ spec:
         persistentVolumeClaim:
           claimName: mysql-pv-claim
 ```
-## Recap
+## 12.3 - Recap
 ![k8s Recap](img/k8s_sample_recap.png)
 
 
 
-# Kubernetes Networking
-## Common Networking Requirements
+# 13 - Kubernetes Networking
+## 13.1 - Common Networking Requirements
 ![k8s Recap](img/k8s_net_monoli.png)
 ![k8s Recap](img/k8s_net_microservices.png)
 
-## Sample App
+
+## 13.2 - Sample App
 ![k8s Recap](img/k8s_net_sample_app.png)
 ![k8s Recap](img/k8s_net_labels.png)
 ![k8s Recap](img/k8s_net_labels_2.png)
 
-## Service Type
+
+## 13.3 - Service Type
 ![k8s Recap](img/k8s_net_service_type.png)
 
-## Service Network
+
+## 13.4 - Service Network
 ![k8s Recap](img/k8s_net_service_net.png)
 
 ![k8s Recap](img/k8s_net_kube_proxy.png)
 
-## Recap
+
+## 13.5 - Recap
 ![k8s Recap](img/k8s_net_recap.png)
 
 
 
-# Kubernetes Storage
-## Big Picture
+# 14 - Kubernetes Storage
+## 14.1 - Big Picture
 ![k8s Recap](img/k8s_storage_picture.png)
 
-## PV and PVC
+
+## 14.2 - PV and PVC
 ![k8s Recap](img/k8s_storage_pv.png)
 
-## Storage Classes
+
+## 14.3 - Storage Classes
 ![k8s Recap](img/k8s_storage_sc.png)
 
 
 
 
-# From Code to Kubernetes
-## Big Picture
+# 15 - From Code to Kubernetes
+## 15.1 - Big Picture
 ![k8s Recap](img/k8s_code_picture.png)
 
 
 
 
-# Kubernetes Deployments
-## Big Picture
+# 16 - Kubernetes Deployments
+## 16.1 - Big Picture
 ![k8s Recap](img/k8s_deploy_picture.png)
 
 
 
-# Kubernetes Auto-scaling Apps
-## Big Picture
+# 17 - Kubernetes Auto-scaling Apps
+## 17.1 - Big Picture
 ![k8s Recap](img/k8s_scaling_picture.png)
 ![k8s Recap](img/k8s_scaling_picture_2.png)
 ![k8s Recap](img/k8s_scaling_picture_3.png)
 
-## Theory HPA (Horizontal Pod Autoscaler)
+
+## 17.2 - Theory HPA (Horizontal Pod Autoscaler)
 ![k8s Recap](img/k8s_scaling_theory.png)
 
-## Theory VPA (Vertical Pod Autoscaler)
+
+## 17.3 - Theory VPA (Vertical Pod Autoscaler)
 Pending
 
 
 
 
-# Kubernetes Security
+# 18 - Kubernetes Security
 
-# More Kubernetes Stuff
+# 19 - More Kubernetes Stuff
 
-# Kuberntes and GKE Wrap-up
+# 20 - Kuberntes and GKE Wrap-up
 
-# GAE: Google App Engine
+# 21 - GAE: Google App Engine
 
-# Services Breadth
+# 22 - Services Breadth
 
-## Compute
-### Compute Engine (GCE)
+## 22.1 - Compute
+### 22.1.1 - Compute Engine (GCE)
 Servicio Zonal.
 * Fast*booting Virtual Machines, you can rent , on demand
 * Infraestructure as a Service
@@ -1396,7 +1490,8 @@ Servicio Zonal.
 * can add GPUs and paid OSes for extra cost
 * Live Migration: google seamlessyly moves instances across host, as needed
 
-### Kubernentes Engine (GKE)
+
+### 22.1.2 - Kubernentes Engine (GKE)
 * Regional
 * Managed kubernetes cluster for running docker containers with autoscaling
 * Used to be calleed GKE
@@ -1406,7 +1501,8 @@ Servicio Zonal.
   * production cluster should have 3+ nodes
 * no GKE management fee,  no matter how many nodes in cluster
 
-### App Engine (GAE)
+
+### 22.1.3 - App Engine (GAE)
 * Regional
 * Platform as a Service that takes your code and runs it
 * Much more than just compute ** Integrates storage, queues, nosql
@@ -1415,7 +1511,8 @@ Servicio Zonal.
   * Standard (non*flex) mode can turn off last instance when no traffic
 * Effectively pay for underlying GCE instances and other services
 
-### Cloud functions (GCF)
+
+### 22.1.4 - Cloud functions (GCF)
 * Regional
 * Runs code in response  to an event ** node.js, python, 
 * Funcionts as a Service (faas) Serverless
@@ -1432,8 +1529,8 @@ Links:
 * https://cloud.google.com/appengine/
 
 
-## Storage
-### Local SSD
+## 22.2 - Storage
+### 22.2.1 - Local SSD
 * Zonal
 * Very fast 375GB solid state drives physically attached to the server
 * Can stripe across eight of them (3TB) for even better perfomance
@@ -1442,7 +1539,8 @@ Links:
 * Like all data at rest, always encrypted
 * Pay by GB*month provisiones (prorated, as always)
 
-### Persistent Disk (PD)
+
+### 22.2.2 - Persistent Disk (PD)
 * Zonal
 * Flexible, block*based network*attached storage; boot disk  for every GCE instance
 * Perf scales with volume size; max way below local SSD, but still plenty fast
@@ -1453,7 +1551,8 @@ Links:
 * Not file*based NAS, but can mount to multiple instances if all are read*only
 * Pay for GB/mo provisioned depending on perf. class; plus snapshot GB/mo used
   
-### Cloud Filestore
+
+### 22.2.3 - Cloud Filestore
 * Zonal
 * Fully*managed file*based storage
 * Predictably fast perfomamcne for your file*based workloads
@@ -1463,7 +1562,8 @@ Links:
 * pay for provisioned TBs in "Standard" (slow) or "premium" (fast) mode
 * Minimum provisioned capacity of 1TB (standard) or 2.5 TB (premium)
 
-### Cloud Storage (GCS)
+
+### 22.2.4 - Cloud Storage (GCS)
 * Regional or Multi*regional
 * Inifitely scalable, fully*managed, versioned, and highly*durable object storage
 * Designed for 99.99999999999% (eleven nines) durability
@@ -1481,8 +1581,9 @@ Links:
 * https://cloud.google.com/persistent*disk/
 * https://cloud.google.com/compute/docs/disks/#localssds
 
-## Databases
-### Cloud SQL
+
+## 22.3 - Databases
+### 22.3.1 - Cloud SQL
 * Regional
 * Fully*managed and reliable MySQL and PostgreSQL databases
 * Supports automatic replication, backup, failver, etc
@@ -1490,7 +1591,8 @@ Links:
 * Effectively pay for underlying GCE instqance and PDs
   * Plus some baked*in service fees
 
-### Cloud Spanner
+
+### 22.3.2 - Cloud Spanner
 * Regional, multi*regional and Global
 * The first horizontally scalable, strongly consistent, relational database service
   * from 1 to hundreds or thousands of nodes
@@ -1502,7 +1604,7 @@ Links:
 * Pay for provisioned node time (by region/multi*region) plus used storage*time
   
 
-### Big Query
+### 22.3.3 - Big Query
 * Multi*regional
 * Scales internally, so it can scan TB in seconds and PB in minutes
 * Pay for GBs actually considered (Scanned) during queries
@@ -1512,7 +1614,8 @@ Links:
   * even cheaper when table not modificed for 90 days (reading still fine)
 * pay for GBs added via streaming inserts
 
-### Cloud Bigtable
+
+### 22.3.4 - Cloud Bigtable
 * Zonal
 * Low latency & high throughput NoSQL DB for large operational & analytical apps
 * supports open*source  HBase API
@@ -1523,7 +1626,8 @@ Links:
 * pay for processing node hours
 * pay for GB*hours used for storage (cheap HDD or fast SSD)
 
-### Cloud Datastore
+
+### 22.3.5 - Cloud Datastore
 * Regional, multi*regional
 * Managed & autoscaled NoSQL DB with indexes, queries, and ACID trans. support
 * NoSQL, so queries can get complicated
@@ -1534,7 +1638,8 @@ Links:
 * py for GB*months of storage used (including indexes)
 * pay for IO operations (deletes, reads, writes) performed (ie, no pre*provisiining)
 
-### Firebase Realtime DB & Cloud firestore
+
+### 22.3.6 - Firebase Realtime DB & Cloud firestore
 * Firebase Zonal
 * Firestore multi*regional
 * NoSQL document stores with real*time client updates via managed websockets
@@ -1543,7 +1648,6 @@ Links:
 * free tier (spark), flat tier (flame), or usage*based pricing (blaze)
   * realtime db: pay more for GB/month stored and DB downloaded
   * firestore pay for operations and much less for storage and transfer
-
 
 Links:
 * https://firebase.google.com/docs/database/rtdb*vs*firestore
@@ -1556,14 +1660,16 @@ Links:
 * https://cloud.google.com/spanner/
 * https://cloud.google.com/sql/
 
-## Data Transfer
-### Data Transfer Appliance
+
+## 22.4 - Data Transfer
+### 22.4.1 - Data Transfer Appliance
 * Rackeable, high*capacity storage server to physically ship data to GCS
 * Ingest only; not a way to avoid egress charges
 * 100TB or 480TB Versions
 * 480TB/week is faster than a saturaed 6Gbps links
   
-### Storage Transfer Service
+
+### 22.4.2 - Storage Transfer Service
 * Global
 * Copies objects for you, so you dont need to set up a machine to do it
 * Destination is always GCS bucket
@@ -1575,8 +1681,9 @@ Links:
 * https://cloud.google.com/storage*transfer*service
 * https://cloud.google.com/transfer*appliance/
 
-## External Networking
-### Google Domains
+
+## 22.5 - External Networking
+### 22.5.1 - Google Domains
 * Global
 * Googles registrar for domain names
 * Private Whois records
@@ -1584,7 +1691,8 @@ Links:
 * Supports DNSSEC
 * Email forwarding with automatic setup of SPF and DKIM (for built*in DNS)
 
-### Cloud DNS
+
+### 22.5.2 - Cloud DNS
 * Global
 * Scalable, reliable, & managed authorative DNS service
 * 100% uptime guarantee
@@ -1595,7 +1703,8 @@ Links:
 * pay fixed fee per managed zone to store and distribute DNS records
 * pay for DNS lookups (ie usage)
 
-### Static IP
+
+### 22.5.3 - Static IP
 * Regional, global
 * Reserve static IP addresses in projects and assign then to resources
 * REgional IPs used for GCE instances & Network Load Balanceers
@@ -1604,7 +1713,8 @@ Links:
   * anycast ip simplifies DNS
 * pay for reserved IPs that are not in use, to discourage wasting them
 
-### Load Balancing
+
+### 22.5.4 - Load Balancing
 * regional, global
 * high*perf, scalable traffic distribution integrated with autoscaling & cloud CDN
 * SDN naturally handles spikes without any prewarming; no instances or devices
@@ -1615,7 +1725,8 @@ Links:
   * reacts quickly (unlike DNS) to changes in users, traffic, network, health, etc
 * Pay by making ingress traffic billable (cheaper than egress) plus hourly per rule
 
-### Cloud CDN
+
+### 22.5.5 - Cloud CDN
 * Global
 * low*latency content delivery based on HTTP(S) CLB & integrated GCE & GCS
 * support http/2 and HTTPS, but no custom origins (GCP Only)
@@ -1634,8 +1745,8 @@ Links:
 * https://domains.google/#/
 
 
-## Internal Networking
-### Virtual private Cloud (VPC)
+## 22.6 - Internal Networking
+### 22.6.1 - Virtual private Cloud (VPC)
 * Regional, Global
 * Global IPv4 unicast software*defined network (SDN) for GCP Resources
 * Automatic mode is easy; custom mode gives control
@@ -1646,7 +1757,8 @@ Links:
 * Free to configure VPC (container)
 * pay to use certain services (VPN) and for network egress
 
-### Cloud Interconnect
+
+### 22.6.2 - Cloud Interconnect
 * Regional, multi*reginal
 * Options for connecting external networks to google network
 * private connections to VPC via Cloud VPN or Dedicated/partner interconnect
@@ -1656,7 +1768,8 @@ Links:
 * Significantly lower egreess fees
   * except cloud VPN, which remains unchanged
 
-### Cloud VPN
+
+### 22.6.3 - Cloud VPN
 * reginal
 * IPsec VPN to connect to VPC via public internet for low*volume data connections
 * for persistent, static connections between gateways (not for a dynamic client)
@@ -1667,7 +1780,8 @@ Links:
 * pay per tunnel*hour
 * Normal traffic charges apply
 
-### Dedicated interconnect
+
+### 22.6.4 - Dedicated interconnect
 * Reginal , multi*regional
 * Direct physical link between VPC and on*prem for high*volume data connections
 * VLAN attachment is private connection to VPC in one region; no public GCP APIs
@@ -1679,7 +1793,7 @@ Links:
 * pay reduced egress rates form VPC through dedicated interconnect
 
 
-### CDN Interconnect
+### 22.6.5 - CDN Interconnect
 * Regional, multi,regional
 * Direct, low*latency connectivity to certain CDN providers, with cheaper egress
 * For external CNDs, not google Cloud CDN service
@@ -1697,8 +1811,9 @@ Links:
 * https://cloud.google.com/hybrid*connectivity
 * https://cloud.google.com/vpc/
 
-## Machine Learning / AI
-### Cloud Machine Learning (ML) Engine
+
+## 22.7 - Machine Learning / AI
+### 22.7.1 - Cloud Machine Learning (ML) Engine
 * Regional
 * Massively scalable managed service for training ML models & making predictions
 * Enables apps/dev to use TensorFlow on datasets of any size; endless use cases
@@ -1709,7 +1824,8 @@ Links:
 * Training: Pay per hour depending on chosen cluster capabilities (ML training units)
 * Prediction: Pay per provisioned node*hour plus by prediction request volume made
 
-### Cloud Vision API
+
+### 22.7.2 - Cloud Vision API
 * Global
 * Classifies imaes into categories, detects objects/faces, & finds/reads printed text
 * Pre*trained ML model to analyze images and discover their contents
@@ -1720,7 +1836,8 @@ Links:
   * Some features are prices together: labels + safeSearchs, ImgProps + Cropping
   * Other features priced individually: Text, Faces, Landmarks, Logos
 
-### Cloud Speech API
+
+### 22.7.3 - Cloud Speech API
 * Global
 * Automatic Speech Recognition (ASR) to turn spoken word audio files into text
 * Pre*trained ML model for recognizing speech in 110+ languages/variants
@@ -1731,7 +1848,8 @@ Links:
 * Accepts contextual hints: words and names that will likey be spoken
 * Pay per 15 seconds of audio processed
 
-### Cloud Natural Language API
+
+### 22.7.4 - Cloud Natural Language API
 * Global
 * Analyzes text for sentiment, intent & content classification, and extracts info
 * Pre*trained ML model for understandding what text means, so you can act on it
@@ -1742,7 +1860,8 @@ Links:
 * Content classification puts each document into one of 700+ predefined categories
 * Charged per request of 1000 charactesr, depending on analysis types requested
 
-### Cloud Translation API
+
+### 22.7.5 - Cloud Translation API
 * Global
 * Translate text among 100+ languages; optionally auto*detects source language
 * Pre*trained ML model for recognizing and translating semantics, not just syntax
@@ -1752,7 +1871,8 @@ Links:
 * Pay per character processed for translation
 * Also pay per character for language auto*detection 
 
-### DialogFlow
+
+### 22.7.6 - DialogFlow
 * Global
 * Build conversational interfaces for websites, mobile appsk, messaging, IoT devices
 * Pre*trained ML model and servce for accepting, parsing, lexin input & responding
@@ -1764,7 +1884,7 @@ Links:
 * Paid plan is unlimited but charges per requests: more for voice, less for text
 
 
-### Cloud Video Intelligence API
+### 22.7.7 - Cloud Video Intelligence API
 * Regional, global
 * Annotates videoss in GCS (or directly uploaded) with info about what the contain
 * Pre*trained ML model for video scene analysis and subject identification
@@ -1775,7 +1895,8 @@ Links:
 * SafeSearch Detection: Detect aduld content within the video
 * Pay per minute of video processed, depending on rqequest detection modes
 
-### Cloud Job Discovery
+
+### 22.7.8 - Cloud Job Discovery
 * Global
 * Helps career sites, company job boards, etc, to improve engagement & conversion
 * Pre*trained ML model to help job seekers search job posting databases
@@ -1797,8 +1918,8 @@ Links:
 * https://cloud.google.com/ai*platform
 
 
-## Big Data and IoT
-### Cloud Internet of Things (IoT) Core
+## 22.8 - Big Data and IoT
+### 22.8.1 - Cloud Internet of Things (IoT) Core
 * Global
 * Fully*managed service to connect, manage, and ingest data from devices globally
 * Device Manager handles device indentity, authentication, config & control
@@ -1810,7 +1931,7 @@ Links:
 * Pay per MV of data exchanged with devices; no per*device charge
 
 
-### Cloud Pub/Sub
+### 22.8.2 - Cloud Pub/Sub
 * Global
 * Infinitely*scalable at*least*once messaing for ingestion, decoupling, etc
 * Global by default: Publish... and consume form anywhere, with consistent latency
@@ -1822,7 +1943,7 @@ Links:
   * Min 1KB per publish/push/pull request (not by message)
 
 
-### Cloud Dataprep
+### 22.8.3 - Cloud Dataprep
 * Global
 * Visually explore, clean, and prepare data for analysis without running servers
 * Data Wrangling for bussines analysts, not IT pros
@@ -1834,7 +1955,7 @@ Links:
 * Pay for other accessed services (GCS, BQ)
 
  
-### Cloud Dataproc
+### 22.8.4 - Cloud Dataproc
 * Zonal
 * Batch MapReduce processing via configuralbe, managed Spark & Hadoop clusters
 * Handles being told to scale (adding or removing nodes) even while running jobs
@@ -1844,8 +1965,9 @@ Links:
 * Pay a Cloud Dataproc management fee per vCPU*hour in the cluste
 * Best for moving existing Spark/Hadoop setups to GCP
   * Prefer Cloud Dataflow for new data processing pipelines * Go with the flow
-  
-### Cloud Dataflow
+
+
+### 22.8.5 - Cloud Dataflow
 * Zonal
 * Smartly*autoscaled & fully*managed batch or stream MapReduce*like processing
 * Released as open*source Apache Beam
@@ -1855,7 +1977,8 @@ Links:
   * Pay per second for vCPUs, RAM GBs PD/PD*SSD (more for streaming)
 * Dataflow Shuffle charged for time per GB use
 
-### Cloud Datalab
+
+### 22.8.6 - Cloud Datalab
 * Regional
 * Interactive tool for data exploration, analysis, visualization and machine learning
 * Uses Jupyter Notebook
@@ -1865,7 +1988,7 @@ Links:
 * Pay for any other resources accessed (BigQuery)
 
 
-### Cloud Data Studio
+### 22.8.7 - Cloud Data Studio
 * Global
 * Big Data Visualization tool for dashboards and reporting
 * Meaningful data stories/presentation enable be3tter bussines decision making
@@ -1874,7 +1997,8 @@ Links:
 * Familiar G Suite sharing and real*time collaboration
 * Pay only for services accessed
 
-### Cloud Genomics
+
+### 22.8.8 - Cloud Genomics
 * Global
 * Store and process genomes and related experiments
 * query complete genomic information of large research projects in seconds
@@ -1910,6 +2034,7 @@ Links:
   * Eg: roles/bigquery.dataEditor,roles/pubsub.subscriber
 * Custom Roles: Project or Org*level collections you definde of granular permissions
 
+
 ### Cloud Identity and Access Management (IAM) (like AWS IAM)
 * Global
 * Controls access to GCP resoureces : authorizaqtion, not really athentiaction/identity
@@ -1931,6 +2056,7 @@ Links:
 * Cloud*Platform*managed keys are better, for GCP (ie GCF, GAE, GCE and GKE)
   * No direct downloading: Google manages private keys & rotate them once a day
   
+
 ### Cloud Identity (like AWS IAM, G Suite, GMail, Active Directory)
 * Global
 * Identity as a Service (IDaaS, not DaaS) to provision and manage users and groups
@@ -1982,8 +2108,6 @@ Links:
     * For GCP*visible services (eg Can't see into MySQL DB on GCE)
 * Data Access logs priced through Stackdriver Logging; rest are free
 
-
-
 Links:
 * https://cloud.google.com/logging/docs/audit/
 * https://cloud.google.com/iap/
@@ -1996,6 +2120,7 @@ Links:
 * https://cloud.google.com/iam/
 * https://cloud.google.com/iam/docs/understanding*roles
 * https://cloud.google.com/security/
+
 
 
 ## Security Management * Monitoring and Response
@@ -2054,7 +2179,6 @@ Links:
 * Free! But charged for services used (DLP API, if configured)
 * Could also be charged for excessive uploadas of external findings
 
-
 Links:
 * https://www.youtube.com/watch?v=ZuLazPgFtBE&feature=youtu.be
 * https://cloud.google.com/blog/products/identity*security/getting*started*with*cloud*security*command*center
@@ -2075,6 +2199,7 @@ Links:
 * Key deletion has 24hours delay, to prevent accidental or malicious data loss
 * Pay for active key versions stored over time
 * Pay for key use operations (encrypt or decrypt; admin operation are free)
+
 
 ### Cloud Hardware Security Module (HSM) (like AWS CloudHSM)
 * Regional, Multi*regional, Global
@@ -2147,6 +2272,7 @@ Links:
 * Detects app latency shift (degradation) over time by evaluating perf reports
 * pay for ingesting and retrieving trace spans
 
+
 ### Stackdriver Debugger
 * Global
 * Grabs program state (callstack, variables, expressions) in live deploys; low impact
@@ -2190,7 +2316,6 @@ Links:
   * Get SKU metadata like regional availability
 * Export of current bill to GCS or BQ is possible  but configured via console, not API
 
-
 Links:
 * https://cloud.google.com/billing/docs/
 * https://cloud.google.com/deployment*manager/
@@ -2214,6 +2339,7 @@ Links:
 * pay per project*user acitve each month (not prorated)
 * pa per gb*month of data storage (prorated)
 * pay per GB of data egress
+
 
 ### Cloud Build (like AWS CodeBuild)
 * Global
@@ -2275,7 +2401,6 @@ Links:
 * firebase Spark and Flame plans have daily allotment of physical and virtual tests
 * Blaze (PAYG) plan charges per device*hour * much less for virtual devices
 
-
 Links:
 * https://firebase.google.com/docs/test*lab/
 * https://cloud.google.com/apigee
@@ -2288,7 +2413,6 @@ Links:
 
 
 # System of services
-
 Project Treehouse: https://gcp.solutions/
 
 # Wrapping Up
