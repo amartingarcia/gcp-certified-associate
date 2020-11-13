@@ -2022,8 +2022,8 @@ Links:
 * https://cloud.google.com/solutions/data*lifecycle*cloud*platform
 
 
-## Identity and Access * Core security
-### Roles (like AWS IAM Policies)
+## 22.9 - Identity and Access * Core security
+### 22.9.1 - Roles (like AWS IAM Policies)
 * Global
 * Roles are collections of permissions to use or manage GCP resources
 * Permissions allow you to perform certain actions: Service.resource.verb
@@ -2035,7 +2035,7 @@ Links:
 * Custom Roles: Project or Org*level collections you definde of granular permissions
 
 
-### Cloud Identity and Access Management (IAM) (like AWS IAM)
+### 22.9.2 - Cloud Identity and Access Management (IAM) (like AWS IAM)
 * Global
 * Controls access to GCP resoureces : authorizaqtion, not really athentiaction/identity
 * Member is user, group, domain, service account, or the public (eg "AllUsers")
@@ -2046,7 +2046,7 @@ Links:
 * IAM is free; pay for authorized GCP service usage
 
 
-### Service Accounts (like AWS IAM Roles)
+### 22.9.3 - Service Accounts (like AWS IAM Roles)
 * Global
 * Special type of Google account that represents an application , not and end user
 * Can be "assumed" by applications or individual users (when so authorized)
@@ -2057,7 +2057,7 @@ Links:
   * No direct downloading: Google manages private keys & rotate them once a day
   
 
-### Cloud Identity (like AWS IAM, G Suite, GMail, Active Directory)
+### 22.9.4 - Cloud Identity (like AWS IAM, G Suite, GMail, Active Directory)
 * Global
 * Identity as a Service (IDaaS, not DaaS) to provision and manage users and groups
 * Free Google Accounts for non*G*Suite users, tied to a verified domain
@@ -2069,7 +2069,7 @@ Links:
 * Cloud Identity is free; pay for authorized GCP service usage
 
 
-### Security Key Enforcement (like MFA)
+### 22.9.5 - Security Key Enforcement (like MFA)
 * Global
 * USB or Bluetooth 2*step verification device that prevents phishing
 * Not like just getting a code via email or text message
@@ -2077,7 +2077,7 @@ Links:
 * Eliminates man*in*the*middel (MITM) attacks aggaints GCP credentials
 
 
-### Cloud Resource Manager (like AWS Organizations)
+### 22.9.6 - Cloud Resource Manager (like AWS Organizations)
 * Global
 * Centrally manage & secure organizations projects with custom folder hierarchy
 * Organization resource is root node in hierarchy; folders per your business needs
@@ -2088,7 +2088,7 @@ Links:
 * Apply IAM policies at organization folder or project levels
 
 
-### Cloud Identity*Aware Proxy (IAP) (like AWS API Gateway)
+### 22.9.7 - Cloud Identity*Aware Proxy (IAP) (like AWS API Gateway)
 * Global
 * Guards apps running on GCP via identity verification, not VPN access
 * Based on CLB & IAM and only passes authed requests through
@@ -2097,7 +2097,7 @@ Links:
 * Pay for load balancing / protocol forwarding rules and traffic
 
 
-### Cloud Audit Logging (like AWS Cloudtrail)
+### 22.9.8 - Cloud Audit Logging (like AWS Cloudtrail)
 * Global
 * Answers the questions "Who did wath, where, and when?" within GCP projects
 * Maintains non*amperable audit logs for each project and organization
@@ -2123,8 +2123,8 @@ Links:
 
 
 
-## Security Management * Monitoring and Response
-### Cloud Armor (like AWS Shield or AWS WAF)
+## 22.10 - Security Management * Monitoring and Response
+### 22.10.1 - Cloud Armor (like AWS Shield or AWS WAF)
 * Global
 * Edge*level protection form DDoS & other attacks on global HTTP(S) LB
 * Offload work: blocked attacks never reach your systems
@@ -2135,7 +2135,7 @@ Links:
 * Pay per policy and rule configured, plus for incoming request volume
 
 
-### Cloud Security Scanner (like AWS Inspector)
+### 22.10.2 - Cloud Security Scanner (like AWS Inspector)
 * Global
 * Free but limeted GAE app vulnerability scanner with "very low false positive rates"
 * "After you set up a scan, Cloud Security Scanner automatically crawls your application, following all links within the scope of your staring URLs, and attempts to exercise as many user inputs and event handlers as possible
@@ -2146,7 +2146,7 @@ Links:
   * Outdated/insecure libraries
 
 
-### Cloud Data Loss PRevention API (DLP) (like AWS Macie)
+### 22.10.3 - Cloud Data Loss PRevention API (DLP) (like AWS Macie)
 * Global
 * Finds and optionally redacts sensitive info in unstructured data streams
 * Helps you minimize what you collect, expose, or copy to other systems
@@ -2156,7 +2156,7 @@ Links:
   * Pricing for storage now very simple but for streaming is still a mess
 
 
-### Event Threat Detection (ETD) (Like Amazon GuardDuty or Splunk)
+### 22.10.4 - Event Threat Detection (ETD) (Like Amazon GuardDuty or Splunk)
 * Global
 * Automatically scans your StackDriver logs for suspicious activity
 * Uses industry*leading threat intelligence, inclouding Google Safe Browsing
@@ -2168,7 +2168,7 @@ Links:
 * No charge for ETD, but charged for its usage of other GCP service (like SD logging)
 
 
-### Cloud Security Command Center (SCC) (like AWS Security Hub or Splunk Enterprise Security)
+### 22.10.5 - Cloud Security Command Center (SCC) (like AWS Security Hub or Splunk Enterprise Security)
 * Global
 * Comprehensive security management and data risk platform for GCP
 * Security information and Event Managemente (SIEM) software
@@ -2188,8 +2188,8 @@ Links:
 * https://cloud.google.com/armor/
 
 
-## Encryption Key management
-### Cloud Key Managemente Service (KMS) (like AWS KMS or Vault)
+## 22.11 - Encryption Key management
+### 22.11.1 - Cloud Key Managemente Service (KMS) (like AWS KMS or Vault)
 * Regional, Multi*regional or global
 * Low*latency service to manage and user cryptographic keys
 * Supports symmetric (AES) and asymmetris (RSA) algorithms
@@ -2201,7 +2201,7 @@ Links:
 * Pay for key use operations (encrypt or decrypt; admin operation are free)
 
 
-### Cloud Hardware Security Module (HSM) (like AWS CloudHSM)
+### 22.11.2 - Cloud Hardware Security Module (HSM) (like AWS CloudHSM)
 * Regional, Multi*regional, Global
 * Cloud KMS keys manged by FIPS 140*2 Level 3 certiifed HSMs
 * Device hots encryption keys and performs cryptographic operations
@@ -2215,8 +2215,8 @@ Links:
 * https://cloud.google.com/security*key*management
 
 
-## Operations and Management
-### Google StackDriver (like AWS Cloudwatch)
+## 22.12 - Operations and Management
+### 22.12.1 - Google StackDriver (like AWS Cloudwatch)
 * Global
 * Family or services for monitoring, logging & diagnosing apps on GCP/AWS/hybrid
 * Service integrations add lots of values among Stackdriver and with GCP
@@ -2228,7 +2228,7 @@ Links:
   * No longer previous systemn of tiers, allotments, and coverages
 
 
-### StackDriver monitoring (like AWS Metrics & dashboards)
+### 22.12.2 - StackDriver monitoring (like AWS Metrics & dashboards)
 * Global
 * Gives visibility into perf, uptime & overall health of cloud apps (based on collectd)
 * Includes built*in/custom metrics, dashboards, global uptime monitoring & alerts
@@ -2240,7 +2240,7 @@ Links:
 * Pay for API calls & per MB for custom or AWS metrics
 
 
-### StackDriver Logging (like AWS Cloudwatch Logs)
+### 22.12.3 - StackDriver Logging (like AWS Cloudwatch Logs)
 * Global
 * Store, search, analyze, monitor, and alert on log data & events (based on Fluentd)
 * Debug issues via integration with Stackdriver monitoring, Trace and error Reporting
@@ -2250,7 +2250,7 @@ Links:
 * Export log data to GCS to cost*effectively store log archives
 
 
-### StackDriver Error Reporting
+### 22.12.4 - StackDriver Error Reporting
 * Global
 * Counts, analyze, aggregates, and tracks crashes in helpul centralized interface
 * Smartly aggregates errors into meaningful groups tailored to language/framework
@@ -2262,7 +2262,7 @@ Links:
 * No direct charge; py for source data in Stackdriver Logging
 
 
-### StackDriver Trace (like AWS X*RAY)
+### 22.12.5 - StackDriver Trace (like AWS X*RAY)
 * Global
 * Tracks and display call tree & timing across distributed systems, to debug perf
 * Automatically captures traces from Google App Engine
@@ -2273,7 +2273,7 @@ Links:
 * pay for ingesting and retrieving trace spans
 
 
-### Stackdriver Debugger
+### 22.12.6 - Stackdriver Debugger
 * Global
 * Grabs program state (callstack, variables, expressions) in live deploys; low impact
 * logpoints repeat for up to 24h, fuller snapshots run once but can be conditional
@@ -2284,7 +2284,7 @@ Links:
 * Share debbuging sessions with others (just send URL)
 
 
-### StackDriver Profiler
+### 22.12.7 - StackDriver Profiler
 * Global
 * Continuous CPU and memory profillin to improve perf & reduce cost
 * Low overhead (Typical: 0.5%; Max 5%) so use it in prod, too!
@@ -2295,7 +2295,7 @@ Links:
 * free to use
 
 
-### Cloud Deployment manager (like AWS Cloudformation)
+### 22.12.8 - Cloud Deployment manager (like AWS Cloudformation)
 * Global
 * Create/manage resources via declarative templates: Infrastructure as Code
 * Declarative allow automaic parallelitzation
@@ -2305,7 +2305,7 @@ Links:
 * free service; just pay for resources involved in deployments
 
 
-### Cloud Billing API ((like AWS BIlling API)
+### 22.12.9 - Cloud Billing API ((like AWS BIlling API)
 * Global
 * Programmatically manage billing for GCP projects and get GCP pricing
 * Billing config
@@ -2328,8 +2328,8 @@ Links:
 * https://cloud.google.com/products/operations
 
 
-## Development and APIs
-### Cloud Source Repositories (like AWS CodeCommit)
+## 22.13 - Development and APIs
+### 22.13.1 - Cloud Source Repositories (like AWS CodeCommit)
 * Global
 * Hosted private git respositories, with integration to GCP and other hosted repos
 * Supports standard Git functionality
@@ -2341,7 +2341,7 @@ Links:
 * pay per GB of data egress
 
 
-### Cloud Build (like AWS CodeBuild)
+### 22.13.2 - Cloud Build (like AWS CodeBuild)
 * Global
 * Continuously takes source code and builds, test and deploys it CI/CD service
 * trigger from Cloud Source Repository (by branch, tag , or commit) or zip in GCS
@@ -2354,7 +2354,7 @@ Links:
 * pay per minute of build time * but free tier is 120 minutes per day
 
 
-### Container Registry (GCR) (like Amazon ECR)
+### 22.13.3- Container Registry (GCR) (like Amazon ECR)
 * Regional or multi*regional
 * Fast, private docker image storage (based on GCS) with docker V2 registry API
 * creates and manages and multi*regional GCS bucket, then trasnlates GCR calls to GCS
@@ -2366,7 +2366,7 @@ Links:
 * Pay directly for storage and egress of underlying GCS (no everhead)
 
 
-### Cloud Enpoints (AWS Gateway)
+### 22.13.4 - Cloud Enpoints (AWS Gateway)
 * Global
 * Handles authorization, monitoring, logging and API Keys for APIS backed by GCP
 * Proxy instances are distributed and hook into Cloud Load Balancer
@@ -2378,7 +2378,7 @@ Links:
 * pay per call to your API
 
 
-### Apigee API Platform (like AWS API Gateway)
+### 22.13.5 - Apigee API Platform (like AWS API Gateway)
 * Global
 * full*featured and enterprise*scale API management platform for whole API lifecycle
 * transform calls between diferent protocols: SOAP, REST, XML, binary, custom
@@ -2390,7 +2390,7 @@ Links:
 * Enterprise tier and special feature pricing are Contact Sales
 
 
-### Test Lab for Android (like AWS Device Farm)
+### 22.13.6 - Test Lab for Android (like AWS Device Farm)
 * Global
 * Cloud infrastructure for running test matrix cross variety of real Android devices
 * Production*grade devices flashed with Android version and locale you specify
@@ -2412,9 +2412,9 @@ Links:
 * https://cloud.google.com/source*repositories/
 
 
-# System of services
+# 23 - System of services
 Project Treehouse: https://gcp.solutions/
 
-# Wrapping Up
+# 24 - Wrapping Up
 
-# Exam Preparation
+# 25 - Exam Preparation
