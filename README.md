@@ -405,7 +405,7 @@ Google Cloud Shell provides you with command-line access to your cloud resources
 * __Encryption__:
   * __Google-managed key__ _(Encrypt object data with encryption keys stored by the Cloud Key Management Service and managed by you.)_
   * __Customer-managed key__ _(Encrypt object data with encryption keys created and managed by you.)_
-  * __Retention Policy__: Set a retention policy to specify the minimum duration that this bucket's objects must be protected from deletion or modification after they're uploaded. You might set a policy to address industry-specific retention challenges
+* __Retention Policy__: Set a retention policy to specify the minimum duration that this bucket's objects must be protected from deletion or modification after they're uploaded. You might set a policy to address industry-specific retention challenges
 
 > Public object url: https://storage.googleapis.com/bucket-name/object-name
 
