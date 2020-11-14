@@ -388,20 +388,24 @@ Google Cloud Shell provides you with command-line access to your cloud resources
 
 # 6 - Basic Services
 ## 6.1 - GCS (Google Cloud Storage)
-* Bucket name, must be __unique__ across Cloud Storage
-* Location type: _(cannot change after the bucket has been created)_
+* __Bucket name__: must be __unique__ across Cloud Storage
+* __Location type__: _(cannot change after the bucket has been created)_
   * __Region__ _(europe-west1, us-east1, etc)_
   * __Dual-region__ _(eur4, nam4)_
   * __Multi-region__ _(us, eu, asia)_
-* Storage class:
+* __Storage class__:
   * __Standard__ _(Good for “hot” data that’s accessed frequently, including websites, streaming videos, and mobile apps)_
   * __Nearline__  _(Low cost. Good for data that can be stored for at least 30 days, including data backup and long-tail multimedia content.)_
   * __Coldline__ _(Very low cost. Good for data that can be stored for at least 90 days, including disaster recovery.)_
   * __Archive__ _(Lowest cost. Good for data that can be stored for at least 365 days, including regulatory archives.)_
-Labels: 
-Encryption:
+* __Labels__: Labels are key:value pairs that allow you to group related buckets together or with other Cloud Platform resources
+* __Access Control__: 
+  * __Fine-grained__: Specify access to individual objects by using object-level permissions (ACLs) in addition to your bucket-level permissions (IAM)
+  * __Uniform__: Ensure uniform access to all objects in the bucket by using only bucket-level permissions (IAM). This option becomes permanent after 90 days. 
+* __Encryption__:
   * __Google-managed key__ _(Encrypt object data with encryption keys stored by the Cloud Key Management Service and managed by you.)_
   * __Customer-managed key__ _(Encrypt object data with encryption keys created and managed by you.)_
+  * __Retention Policy__: Set a retention policy to specify the minimum duration that this bucket's objects must be protected from deletion or modification after they're uploaded. You might set a policy to address industry-specific retention challenges
 
 > Public object url: https://storage.googleapis.com/bucket-name/object-name
 
