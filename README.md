@@ -711,11 +711,11 @@ gcloud <global flags> <service/product> <group/area> <command> <flags> <paramete
 * ussed very often for account, project, region, and zone
   * Set "core/account" or "account" to replace _--account_
   * Set "core/project" or "project" to replace _--project_
-  * Set "compute/region" to replace "**region"
-  * Set "compute/zone" to replace "**zone"
-* Set with _gcloud config set <property> <value>_
-* Check with _gcloud config set value <property>_
-* Clear with _gcloud config unset <property>_
+  * Set "compute/region" to replace "--region"
+  * Set "compute/zone" to replace "--zone"
+* Set with _gcloud config set `<property> <value>`_
+* Check with _gcloud config set value `<property>`_
+* Clear with _gcloud config unset `<property>`_
 
 
 ### 6.4.5 - Configurations
@@ -1574,7 +1574,7 @@ Pending
 * Pay for GB/mo provisioned depending on perf. class; plus snapshot GB/mo used
   
 
-### 22.2.3 - Cloud Filestore
+### 22.2.3 - Cloud Filestore (NFS)
 * __Zonal__
 * Fully-managed file-based storage
 * Predictably fast perfomamcne for your file-based workloads
@@ -1605,7 +1605,7 @@ Pending
 
 
 ## 22.3 - Databases
-### 22.3.1 - Cloud SQL
+### 22.3.1 - Cloud SQL (AWS RDS)
 * __Regional__
 * Fully-managed and reliable MySQL and PostgreSQL databases
 * Supports automatic replication, backup, failver, etc
@@ -1614,7 +1614,7 @@ Pending
   * Plus some baked-in service fees
 
 
-### 22.3.2 - Cloud Spanner
+### 22.3.2 - Cloud Spanner (aws Aurora)
 * Regional, multi-regional and Global
 * The first horizontally scalable, strongly consistent, relational database service
   * from 1 to hundreds or thousands of nodes
@@ -1626,7 +1626,7 @@ Pending
 * Pay for provisioned node time _(by region/multi-region)_ plus used storage-time
   
 
-### 22.3.3 - Big Query
+### 22.3.3 - Big Query (AWS Athena)
 * __Multi-regional__
 * Scales internally, so it can scan TB in seconds and PB in minutes
 * Pay for GBs actually considered _(Scanned)_ during queries
