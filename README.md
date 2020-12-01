@@ -1501,7 +1501,7 @@ Pending
 
 # 22 - Services Breadth
 ## 22.1 - Compute
-### 22.1.1 - Compute Engine (GCE)
+### 22.1.1 - Compute Engine (GCE) like AWS EC2
 * __Zonal__
 * Fast -booting Virtual Machines, you can rent, on demand
 * Infraestructure as a Service
@@ -1513,7 +1513,7 @@ Pending
 * Live Migration: google seamlessyly moves instances across host, as needed
 
 
-### 22.1.2 - Kubernentes Engine (GKE)
+### 22.1.2 - Kubernentes Engine (GKE) like AWS EKS
 * __Regional__
 * Managed kubernetes cluster for running docker containers with autoscaling
 * Used to be calleed GKE
@@ -1534,14 +1534,14 @@ Pending
 * Effectively pay for underlying GCE instances and other services
 
 
-### 22.1.4 - Cloud functions (GCF)
+### 22.1.4 - Cloud functions (GCF) like AWS Lambda
 * __Regional__
-* Runs code in response  to an event ** node.js, python, 
+* Runs code in response  to an event -- node.js, python, 
 * Funcionts as a Service (faas) Serverless
 * Pay for CPU and RAm assigned to function, per 100ms
 * Each function automatically gets and HTTP endpoint
 * can be triggered by GCS objects, Pub/sub messages, etc
-* Massively scalable (horizont) ** Runs many copies when needed
+* Massively scalable (horizont) -- Runs many copies when needed
 * Often used for chatbots, message processors, IoT, automation, etc
 
 ### 22.1.5 - Links section
@@ -1574,7 +1574,7 @@ Pending
 * Pay for GB/mo provisioned depending on perf. class; plus snapshot GB/mo used
   
 
-### 22.2.3 - Cloud Filestore (NFS)
+### 22.2.3 - Cloud Filestore (NFS) like AWS NFS
 * __Zonal__
 * Fully-managed file-based storage
 * Predictably fast perfomamcne for your file-based workloads
@@ -1585,7 +1585,7 @@ Pending
 * Minimum provisioned capacity of 1TB _(standard)_ or 2.5 TB _(premium)_
 
 
-### 22.2.4 - Cloud Storage (GCS)
+### 22.2.4 - Cloud Storage (GCS) like AWS Se
 * __Regional__ and __Multi-regional__
 * Inifitely scalable, fully-managed, versioned, and highly*durable object storage
 * Designed for 99.99999999999% _(eleven nines)_ durability
@@ -1595,7 +1595,7 @@ Pending
   * Diffs in cost & availabilty _(99.95%, 99.9%, 99%)_ not latency _(no thaw delay)_
 * All cases have same API, so can use gsutil and gcsfuse _(but beware)_
 * Pay for data operations & GB-months stored by class
-* Nearline/Cloudline: also pay for GBs retrieved **plus early deletion fee if < 30/90 days
+* Nearline/Cloudline: also pay for GBs retrieved --plus early deletion fee if < 30/90 days
 
 ### 22.2.4 - Links section
 * [Storage](https://cloud.google.com/storage/)
@@ -1605,7 +1605,7 @@ Pending
 
 
 ## 22.3 - Databases
-### 22.3.1 - Cloud SQL (AWS RDS)
+### 22.3.1 - Cloud SQL like AWS RDS
 * __Regional__
 * Fully-managed and reliable MySQL and PostgreSQL databases
 * Supports automatic replication, backup, failver, etc
@@ -1637,7 +1637,7 @@ Pending
 * pay for GBs added via streaming inserts
 
 
-### 22.3.4 - Cloud Bigtable
+### 22.3.4 - Cloud Bigtable (DynamoDB, mongo)
 * __Zonal__
 * Low latency & high throughput NoSQL DB for large operational & analytical apps
 * supports open-source  HBase API
@@ -1649,7 +1649,7 @@ Pending
 * pay for GB*hours used for storage _(cheap HDD or fast SSD)_
 
 
-### 22.3.5 - Cloud Datastore
+### 22.3.5 - Cloud Datastore (DynamoDB)
 * __Regional__ and __multi-regional__
 * Managed & autoscaled NoSQL DB with indexes, queries, and ACID trans. support
 * NoSQL, so queries can get complicated
@@ -1705,7 +1705,7 @@ Pending
 
 
 ## 22.5 - External Networking
-### 22.5.1 - Google Domains
+### 22.5.1 - Google Domains 
 * __Global__
 * Googles registrar for domain names
 * Private Whois records
@@ -1714,7 +1714,7 @@ Pending
 * Email forwarding with automatic setup of SPF and DKIM _(for built-in DNS)_
 
 
-### 22.5.2 - Cloud DNS
+### 22.5.2 - Cloud DNS like AWS Route53
 * __Global__
 * Scalable, reliable, & managed authorative DNS service
 * 100% uptime guarantee
@@ -1894,7 +1894,7 @@ Pending
 * Also pay per character for language auto-detection 
 
 
-### 22.7.6 - DialogFlow
+### 22.7.6 - DialogFlow like AWS Flex
 * __Global__
 * Build conversational interfaces for websites, mobile appsk, messaging, IoT devices
 * Pre-trained ML model and servce for accepting, parsing, lexin input & responding
@@ -1965,7 +1965,7 @@ Pending
   - Min 1KB per publish/push/pull request (not by message)
 
 
-### 22.8.3 - Cloud Dataprep
+### 22.8.3 - Cloud Dataprep like AWS Glue
 * Global
 * Visually explore, clean, and prepare data for analysis without running servers
 * Data Wrangling for bussines analysts, not IT pros
@@ -1977,7 +1977,7 @@ Pending
 * Pay for other accessed services (GCS, BQ)
 
  
-### 22.8.4 - Cloud Dataproc
+### 22.8.4 - Cloud Dataproc like AWS EMR
 * Zonal
 * Batch MapReduce processing via configuralbe, managed Spark & Hadoop clusters
 * Handles being told to scale (adding or removing nodes) even while running jobs
